@@ -43,3 +43,10 @@ func fib(x int) int{
     return fib(x-1) + fib(x-2)
   }
 }
+
+func swap(x *int, y *int) (*int, *int){
+  temp = x
+  x = y
+  y = temp
+  return x, y
+}
