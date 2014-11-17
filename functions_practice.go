@@ -36,17 +36,21 @@ func makeOddGenerator() func() uint {
   }
 }
 
-func fib(x int) int{
-  if x <= 0{
+func fib(n int) int{
+  if n == 0{
     return 0
+  } else if n == 1{
+    return 1
   } else {
-    return fib(x-1) + fib(x-2)
+    return fib(n-1) + fib(n-2)
   }
 }
 
-func swap(x *int, y *int) (*int, *int){
-  temp = x
-  x = y
-  y = temp
-  return x, y
-}
+//
+
+// func swap(x *int, y *int) (*int, *int){
+//   var temp int = x
+//   &x = y
+//   &y = temp
+//   return &x, &y
+// }
