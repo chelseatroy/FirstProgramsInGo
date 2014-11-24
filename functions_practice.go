@@ -37,12 +37,10 @@ func makeOddGenerator() func() uint {
 }
 
 func fib(n int) int{
-  if n == 0{
-    return 0
-  } else if n == 1{
-    return 1
-  } else {
-    return fib(n-1) + fib(n-2)
+   switch n {
+    case 0: return 0
+    case 1: return 1
+    default: return fib(n-1) + fib(n-2)
   }
 }
 
